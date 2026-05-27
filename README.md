@@ -1,4 +1,4 @@
-# Banking HRMS Automation Framework
+# Orange HRMS Automation Framework
 
 ## Project Overview
 
