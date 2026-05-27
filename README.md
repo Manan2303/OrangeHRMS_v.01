@@ -122,4 +122,4 @@ Supported execution:
 
 # GitHub Repository
 
-Banking HRMS Automation Framework
+Orange HRMS Automation Framework
