@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <!-- Appenders define where the logs go -->
+    <Appenders>
+
+        <!-- Console Appender: show logs in the terminal -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %c{1} - %msg%n"/>
+        </Console>
+
+        <!-- File Appender: save logs to a file -->
+        <File name="FileLogger" fileName="Logs_Report/app.log" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %c{1} - %msg%n"/>
+        </File>
+
+        <!-- Rolling File Appender: rotate logs daily or by size -->
+        <RollingFile name="RollingFileLogger"
+                     fileName="Logs_Report/automation.log"
+                     filePattern="Logs_Report/automation-%d{yyyy-MM-dd}-%i.log.gz">
+
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1} - %m%n</Pattern>
+            </PatternLayout>
+
+            <Policies>
+                <!-- Rotate daily -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <!-- Or rotate when file > 10MB -->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+        </RollingFile>
+
+    </Appenders>
+
+    <!-- Loggers define which classes/packages use which appender -->
+    <Loggers>
+
+        <!-- Application-specific logging -->
+        <Logger name="OrangeHRMS" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFileLogger"/>
+        </Logger>
+
+        <!-- Root logger: default for everything -->
+        <Root level="All">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFileLogger"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>
