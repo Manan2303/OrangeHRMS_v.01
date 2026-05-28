@@ -13,6 +13,7 @@ import PageObjects.LoginPage;
 import PageObjects.createCandidate;
 import PageObjects.createVaccancy;
 import TestBase.baseClass_HRMS;
+import Utilities.screenshot;
 import drivers.DriverManager;
 
 public class AddCandidateForm_TC extends baseClass_HRMS {
@@ -84,7 +85,7 @@ public class AddCandidateForm_TC extends baseClass_HRMS {
 	            if (DriverManager.getDriver() != null) { // Optional: check if session is active
 	               
 	            	DriverManager.getDriver().getTitle(); // This will throw if session is invalid
-	                captureFailTC(result.getName());
+	            	screenshot.captureFailTC(result.getName());
 	            }
 	        } catch (Exception e) {
 	            System.out.println("Unable to capture screenshot: " + e.getMessage());

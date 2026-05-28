@@ -171,41 +171,7 @@ public class baseClass_HRMS {
 	        DriverManager.quitDriver();
 	    }
 	   
-	// Capture screenshot on failure
-	   public static String captureFailTC(String testName) {
-
-	        String timestamp =
-	                new SimpleDateFormat("yyyyMMdd_HHmmss")
-	                .format(new Date());
-
-	        String path =
-	                System.getProperty("user.dir")
-	                + "/bugs_screenshots/"
-	                + testName + "_" + timestamp + ".png";
-
-	        TakesScreenshot ts =
-	                (TakesScreenshot) DriverManager.getDriver();
-
-	        File source = ts.getScreenshotAs(OutputType.FILE);
-
-	        File destination = new File(path);
-
-	        try {
-
-	            Files.copy(
-	                    source.toPath(),
-	                    destination.toPath(),
-	                    StandardCopyOption.REPLACE_EXISTING);
-
-	          System.out.println("Screenshot captured");
-
-	        } catch (IOException e) {
-
-	           System.out.println("Screenshot failed : " + e.getMessage());;
-	        }
-
-	        return path;
-	    }
+	
 }
 
 

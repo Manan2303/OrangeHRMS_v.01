@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [OrangeHRMS_Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="Utilities.ExtentReportManager"/>
+    <listener class-name="listeners.ExtentReportManager"/>
   </listeners>
   <test thread-count="5" name="OrangeHRMS_test(failed)">
     <parameter name="os" value="windows"/>
@@ -24,16 +24,6 @@
           <include name="setdata"/>
         </methods>
       </class> <!-- TestCases.AddCandidateForm_TC -->
-      <class name="TestCases.Login_TC">
-        <methods>
-          <include name="testCompanyLogo"/>
-          <include name="testValidLogin"/>
-          <include name="testInvalidLogin"/>
-          <include name="captureScreenshotOnFailure"/>
-          <include name="tearDown"/>
-          <include name="setdata"/>
-        </methods>
-      </class> <!-- TestCases.Login_TC -->
     </classes>
   </test> <!-- OrangeHRMS_test(failed) -->
 </suite> <!-- Failed suite [OrangeHRMS_Suite] -->

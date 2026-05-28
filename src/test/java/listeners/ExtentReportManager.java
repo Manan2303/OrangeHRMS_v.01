@@ -21,6 +21,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import TestBase.baseClass_HRMS;
+import Utilities.screenshot;
 
 
 public class ExtentReportManager implements ITestListener {
@@ -82,7 +83,7 @@ public class ExtentReportManager implements ITestListener {
 		test.log(Status.FAIL,result.getName()+" got failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
 
-		String imgPath = baseClass_HRMS.captureFailTC(result.getName());
+		String imgPath =screenshot.captureFailTC(result.getName());
 		
 		test.fail("Screenshot below").addScreenCaptureFromPath(imgPath);
 //		test.addScreenCaptureFromPath(imgPath);
