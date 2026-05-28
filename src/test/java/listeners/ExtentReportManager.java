@@ -27,7 +27,10 @@ import Utilities.screenshot;
 public class ExtentReportManager implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
-	public ExtentTest test;
+	//	public ExtentTest test;
+
+	// Thread safe for parallel execution
+	public ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
 	String repName;
 
@@ -45,6 +48,9 @@ public class ExtentReportManager implements ITestListener {
 		sparkReporter.config().setDocumentTitle("OrangeHRMS_V.1.1 Automation Report"); // Title of report
 		sparkReporter.config().setReportName("OrangeHRMS_V.1.1 Functional Testing"); // name of the report
 		sparkReporter.config().setTheme(Theme.DARK);
+
+
+		// Attach Report
 
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
@@ -65,36 +71,57 @@ public class ExtentReportManager implements ITestListener {
 			extent.setSystemInfo("Groups", includedGroups.toString());
 		}
 	}
-
+	// For test pass
 	public void onTestSuccess(ITestResult result) {
 
-//		test = extent.createTest(result.getTestClass().getName());
-		test = extent.createTest(result.getMethod().getMethodName());
-		test.assignCategory(result.getMethod().getGroups()); // to display groups in report
-		test.log(Status.PASS,result.getName()+" got successfully executed");
+		//		test = extent.createTest(result.getTestClass().getName());
+		ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+		extentTest.set(test);
+		extentTest.get().assignCategory(result.getMethod().getGroups()); // to display groups in report
+		// Get browser name dynamically
+		String browserName = result.getTestContext()
+				.getCurrentXmlTest()
+				.getParameter("browser");
+
+		extentTest.get().info("Browser Used : " + browserName);
+		extentTest.get().log(Status.PASS,result.getName()+" got successfully executed");
 
 	}
 
 	public void onTestFailure(ITestResult result) {
-//		test = extent.createTest(result.getTestClass().getName());
-		test = extent.createTest(result.getMethod().getMethodName());
-		test.assignCategory(result.getMethod().getGroups());
+		//		test = extent.createTest(result.getTestClass().getName());
+		ExtentTest test = extent.createTest( result.getMethod().getMethodName());
 
-		test.log(Status.FAIL,result.getName()+" got failed");
-		test.log(Status.INFO, result.getThrowable().getMessage());
+		extentTest.set(test);
+		extentTest.get().assignCategory(result.getMethod().getGroups());
+
+		String browserName = result.getTestContext()
+				.getCurrentXmlTest()
+				.getParameter("browser");
+
+		test.info("Browser Used : " + browserName);
+
+		extentTest.get().log(Status.FAIL,result.getName()+" got failed");
+		extentTest.get().log(Status.INFO, result.getThrowable().getMessage());
 
 		String imgPath =screenshot.captureFailTC(result.getName());
-		
-		test.fail("Screenshot below").addScreenCaptureFromPath(imgPath);
-//		test.addScreenCaptureFromPath(imgPath);
+
+		extentTest.get().fail("Screenshot below").addScreenCaptureFromPath(imgPath);
+		//		test.addScreenCaptureFromPath(imgPath);
 	}
 
 	public void onTestSkipped(ITestResult result) {
-//		test = extent.createTest(result.getTestClass().getName());
-		test = extent.createTest(result.getMethod().getMethodName());
-		test.assignCategory(result.getMethod().getGroups());
-		test.log(Status.SKIP, result.getName()+" got skipped");
-		test.log(Status.INFO, result.getThrowable().getMessage());
+		//		test = extent.createTest(result.getTestClass().getName());
+		ExtentTest test = extent.createTest( result.getMethod().getMethodName());
+		extentTest.set(test);
+
+		extentTest.get().assignCategory(result.getMethod().getGroups());
+		// Browser 
+		String browserName = result.getTestContext() .getCurrentXmlTest() .getParameter("browser"); extentTest.get() .info("Browser Used : " + browserName);
+
+
+		extentTest.get() .log(Status.SKIP, result.getName() + " got skipped");
+		extentTest.get() .log(Status.INFO, result.getThrowable().getMessage());
 	}
 
 	public void onFinish(ITestContext testContext) {
@@ -111,7 +138,7 @@ public class ExtentReportManager implements ITestListener {
 		}
 
 
-		
+
 	}
 
 }

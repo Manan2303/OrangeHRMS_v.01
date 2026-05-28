@@ -1,123 +1,55 @@
-2026-05-27 17:22:42 [main] INFO  Login_TC - ***** Starting Test Execution ****
-2026-05-27 17:22:43 [main] INFO  AddCandidateForm_TC - ***** Starting Test Execution ****
-2026-05-27 17:22:43 [main] INFO  createVacancy_TC - ***** Starting Test Execution ****
-2026-05-27 17:24:09 [main] INFO  Login_TC - ***** Starting Test Execution ****
-2026-05-27 17:25:28 [main] INFO  Login_TC - Local Browser launched
-2026-05-27 17:25:29 [main] INFO  LoginPage - Checking company logo
-2026-05-27 17:25:30 [main] INFO  LoginPage - Entering username
-2026-05-27 17:25:30 [main] INFO  LoginPage - Username entered successfully
-2026-05-27 17:25:30 [main] INFO  LoginPage - Entering password
-2026-05-27 17:25:30 [main] INFO  LoginPage - Password entered successfully
-2026-05-27 17:25:30 [main] INFO  LoginPage - Clicking Login button
-2026-05-27 17:25:30 [main] INFO  LoginPage - Login button clicked successfully
-2026-05-27 17:25:36 [main] INFO  LoginPage - Performing Logout
-2026-05-27 17:25:44 [main] INFO  LoginPage - Logout successful
-2026-05-27 17:25:44 [main] INFO  LoginPage - Entering username
-2026-05-27 17:25:45 [main] INFO  LoginPage - Username entered successfully
-2026-05-27 17:25:45 [main] INFO  LoginPage - Entering password
-2026-05-27 17:25:45 [main] INFO  LoginPage - Password entered successfully
-2026-05-27 17:25:45 [main] INFO  LoginPage - Clicking Login button
-2026-05-27 17:25:45 [main] INFO  LoginPage - Login button clicked successfully
-2026-05-27 17:25:48 [main] INFO  Login_TC - ===== Closing Browser =====
-2026-05-27 17:25:48 [main] INFO  AddCandidateForm_TC - ***** Starting Test Execution ****
-2026-05-27 17:25:56 [main] INFO  AddCandidateForm_TC - Local Browser launched
-2026-05-27 17:25:56 [main] INFO  AddCandidateForm_TC - Create loginPage object Class and very company logo ......
-2026-05-27 17:25:56 [main] INFO  LoginPage - Checking company logo
-2026-05-27 17:25:58 [main] INFO  AddCandidateForm_TC - provide user name ........
-2026-05-27 17:25:58 [main] INFO  LoginPage - Entering username
-2026-05-27 17:25:58 [main] INFO  LoginPage - Username entered successfully
-2026-05-27 17:25:58 [main] INFO  AddCandidateForm_TC - provide user password ........
-2026-05-27 17:25:58 [main] INFO  LoginPage - Entering password
-2026-05-27 17:25:58 [main] INFO  LoginPage - Password entered successfully
-2026-05-27 17:25:58 [main] INFO  AddCandidateForm_TC - Click submit button for login !!!!!
-2026-05-27 17:25:58 [main] INFO  LoginPage - Clicking Login button
-2026-05-27 17:26:01 [main] INFO  LoginPage - Login button clicked successfully
-2026-05-27 17:26:01 [main] INFO  AddCandidateForm_TC - Waiting for 20 sec  to open dashboard bage after successfully login.....
-2026-05-27 17:26:01 [main] INFO  AddCandidateForm_TC - Call create candidate object class to access.......
-2026-05-27 17:26:01 [main] INFO  AddCandidateForm_TC - Move to recruitment menu after redirect to dashboard
-2026-05-27 17:26:01 [main] INFO  createCandidate - Navigating to Recruitment → Add Candidate
-2026-05-27 17:26:11 [main] INFO  createCandidate - Add Candidate button clicked successfully
-2026-05-27 17:26:11 [main] INFO  AddCandidateForm_TC - Open and verify candidate page
-2026-05-27 17:26:11 [main] INFO  createCandidate - Verifying Add Candidate page
-2026-05-27 17:26:12 [main] INFO  createCandidate - Page title: Add Candidate
-2026-05-27 17:26:12 [main] INFO  createCandidate - Add Candidate page verified successfully
-2026-05-27 17:26:12 [main] INFO  AddCandidateForm_TC - input candidate detail in registration page ....
-2026-05-27 17:26:12 [main] INFO  createCandidate - Entering candidate details
-2026-05-27 17:26:12 [main] INFO  createCandidate - Candidate name entered: Priyanshu Kumar Singh
-2026-05-27 17:26:27 [main] ERROR createCandidate - Failed to enter candidate details: no such element: Unable to locate element: {"method":"xpath","selector":"//body//input[@type='email']"}
-  (Session info: chrome=148.0.7778.179)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc2eb540776e568b62a6a674e660b873, findElement {value=//body//input[@type='email'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\sriva\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53160}, goog:processID: 6720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53160/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc2eb540776e568b62a6a674e660b873
-2026-05-27 17:26:27 [main] INFO  AddCandidateForm_TC - capture screenshot for test fail....
-2026-05-27 17:26:27 [main] ERROR AddCandidateForm_TC - Test Failed
-2026-05-27 17:26:28 [main] INFO  AddCandidateForm_TC - ===== Closing Browser =====
-2026-05-27 17:26:28 [main] INFO  createVacancy_TC - ***** Starting Test Execution ****
-2026-05-27 17:26:35 [main] INFO  createVacancy_TC - Local Browser launched
-2026-05-27 17:26:36 [main] INFO  createVaccancy - Navigating to Recruitment → Vacancies
-2026-05-27 17:27:06 [main] ERROR createVaccancy - Navigation failed: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //span[normalize-space()='Recruitment']' (tried for 10 second(s) with 500 milliseconds interval)
-2026-05-27 17:27:06 [main] INFO  createVacancy_TC - ===== Closing Browser =====
-2026-05-27 18:06:26 [main] INFO  Login_TC - ***** Starting Test Execution ****
-2026-05-27 18:06:37 [main] INFO  Login_TC - Local Browser launched
-2026-05-27 18:06:37 [main] INFO  LoginPage - Checking company logo
-2026-05-27 18:06:37 [main] INFO  LoginPage - Entering username
-2026-05-27 18:06:37 [main] INFO  LoginPage - Username entered successfully
-2026-05-27 18:06:37 [main] INFO  LoginPage - Entering password
-2026-05-27 18:06:37 [main] INFO  LoginPage - Password entered successfully
-2026-05-27 18:06:37 [main] INFO  LoginPage - Clicking Login button
-2026-05-27 18:06:40 [main] INFO  LoginPage - Login button clicked successfully
-2026-05-27 18:06:45 [main] INFO  LoginPage - Performing Logout
-2026-05-27 18:06:48 [main] INFO  LoginPage - Logout successful
-2026-05-27 18:06:48 [main] INFO  LoginPage - Entering username
-2026-05-27 18:06:49 [main] INFO  LoginPage - Username entered successfully
-2026-05-27 18:06:49 [main] INFO  LoginPage - Entering password
-2026-05-27 18:06:49 [main] INFO  LoginPage - Password entered successfully
-2026-05-27 18:06:49 [main] INFO  LoginPage - Clicking Login button
-2026-05-27 18:06:50 [main] INFO  LoginPage - Login button clicked successfully
-2026-05-27 18:06:50 [main] INFO  Login_TC - ===== Closing Browser =====
-2026-05-27 18:06:52 [main] INFO  AddCandidateForm_TC - ***** Starting Test Execution ****
-2026-05-27 18:07:01 [main] INFO  AddCandidateForm_TC - Local Browser launched
-2026-05-27 18:07:01 [main] INFO  AddCandidateForm_TC - Create loginPage object Class and very company logo ......
-2026-05-27 18:07:01 [main] INFO  LoginPage - Checking company logo
-2026-05-27 18:07:01 [main] INFO  AddCandidateForm_TC - provide user name ........
-2026-05-27 18:07:01 [main] INFO  LoginPage - Entering username
-2026-05-27 18:07:02 [main] INFO  LoginPage - Username entered successfully
-2026-05-27 18:07:02 [main] INFO  AddCandidateForm_TC - provide user password ........
-2026-05-27 18:07:02 [main] INFO  LoginPage - Entering password
-2026-05-27 18:07:02 [main] INFO  LoginPage - Password entered successfully
-2026-05-27 18:07:02 [main] INFO  AddCandidateForm_TC - Click submit button for login !!!!!
-2026-05-27 18:07:02 [main] INFO  LoginPage - Clicking Login button
-2026-05-27 18:07:03 [main] INFO  LoginPage - Login button clicked successfully
-2026-05-27 18:07:03 [main] INFO  AddCandidateForm_TC - Waiting for 20 sec  to open dashboard bage after successfully login.....
-2026-05-27 18:07:03 [main] INFO  AddCandidateForm_TC - Call create candidate object class to access.......
-2026-05-27 18:07:03 [main] INFO  AddCandidateForm_TC - Move to recruitment menu after redirect to dashboard
-2026-05-27 18:07:03 [main] INFO  createCandidate - Navigating to Recruitment → Add Candidate
-2026-05-27 18:07:10 [main] INFO  createCandidate - Add Candidate button clicked successfully
-2026-05-27 18:07:10 [main] INFO  AddCandidateForm_TC - Open and verify candidate page
-2026-05-27 18:07:10 [main] INFO  createCandidate - Verifying Add Candidate page
-2026-05-27 18:07:11 [main] INFO  createCandidate - Page title: Add Candidate
-2026-05-27 18:07:11 [main] INFO  createCandidate - Add Candidate page verified successfully
-2026-05-27 18:07:11 [main] INFO  AddCandidateForm_TC - input candidate detail in registration page ....
-2026-05-27 18:07:11 [main] INFO  createCandidate - Entering candidate details
-2026-05-27 18:07:11 [main] INFO  createCandidate - Candidate name entered: Priyanshu Kumar Singh
-2026-05-27 18:07:27 [main] ERROR createCandidate - Failed to enter candidate details: no such element: Unable to locate element: {"method":"xpath","selector":"//body//input[@type='email']"}
-  (Session info: chrome=148.0.7778.179)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [541a2d8500762694b9db9a9596097453, findElement {value=//body//input[@type='email'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\sriva\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53371}, goog:processID: 4228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53371/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 541a2d8500762694b9db9a9596097453
-2026-05-27 18:07:29 [main] INFO  AddCandidateForm_TC - capture screenshot for test fail....
-2026-05-27 18:07:29 [main] ERROR AddCandidateForm_TC - Test Failed
-2026-05-27 18:07:29 [main] INFO  AddCandidateForm_TC - ===== Closing Browser =====
-2026-05-27 18:07:34 [main] INFO  createVacancy_TC - ***** Starting Test Execution ****
-2026-05-27 18:07:48 [main] INFO  createVacancy_TC - Local Browser launched
-2026-05-27 18:07:48 [main] INFO  createVaccancy - Navigating to Recruitment → Vacancies
-2026-05-27 18:08:18 [main] ERROR createVaccancy - Navigation failed: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //span[normalize-space()='Recruitment']' (tried for 10 second(s) with 500 milliseconds interval)
-2026-05-27 18:08:19 [main] INFO  createVacancy_TC - ===== Closing Browser =====
+2026-05-28 14:34:57 [TestNG-tests-1] INFO  Login_TC - ***** Starting Test Execution ****
+2026-05-28 14:36:08 [TestNG-tests-1] INFO  Login_TC - Local Browser launched
+2026-05-28 14:36:10 [TestNG-tests-1] INFO  LoginPage - Checking company logo
+2026-05-28 14:36:10 [TestNG-tests-1] INFO  LoginPage - Company logo displayed successfully
+2026-05-28 14:36:11 [TestNG-tests-2] INFO  Login_TC - Local Browser launched
+2026-05-28 14:36:11 [TestNG-tests-2] INFO  LoginPage - Checking company logo
+2026-05-28 14:36:11 [TestNG-tests-1] INFO  LoginPage - Entering username
+2026-05-28 14:36:13 [TestNG-tests-2] INFO  LoginPage - Company logo displayed successfully
+2026-05-28 14:36:13 [TestNG-tests-2] INFO  LoginPage - Entering username
+2026-05-28 14:36:13 [TestNG-tests-3] INFO  Login_TC - Local Browser launched
+2026-05-28 14:36:13 [TestNG-tests-3] INFO  LoginPage - Checking company logo
+2026-05-28 14:36:13 [TestNG-tests-2] INFO  LoginPage - Username entered successfully
+2026-05-28 14:36:13 [TestNG-tests-2] INFO  LoginPage - Entering password
+2026-05-28 14:36:13 [TestNG-tests-1] INFO  LoginPage - Username entered successfully
+2026-05-28 14:36:13 [TestNG-tests-1] INFO  LoginPage - Entering password
+2026-05-28 14:36:13 [TestNG-tests-2] INFO  LoginPage - Password entered successfully
+2026-05-28 14:36:13 [TestNG-tests-2] INFO  LoginPage - Clicking Login button
+2026-05-28 14:36:14 [TestNG-tests-1] INFO  LoginPage - Password entered successfully
+2026-05-28 14:36:14 [TestNG-tests-1] INFO  LoginPage - Clicking Login button
+2026-05-28 14:36:15 [TestNG-tests-2] INFO  LoginPage - Login button clicked successfully
+2026-05-28 14:36:15 [TestNG-tests-1] INFO  LoginPage - Login button clicked successfully
+2026-05-28 14:36:18 [TestNG-tests-3] INFO  LoginPage - Company logo displayed successfully
+2026-05-28 14:36:18 [TestNG-tests-3] INFO  LoginPage - Entering username
+2026-05-28 14:36:19 [TestNG-tests-3] INFO  LoginPage - Username entered successfully
+2026-05-28 14:36:19 [TestNG-tests-3] INFO  LoginPage - Entering password
+2026-05-28 14:36:19 [TestNG-tests-3] INFO  LoginPage - Password entered successfully
+2026-05-28 14:36:19 [TestNG-tests-3] INFO  LoginPage - Clicking Login button
+2026-05-28 14:36:21 [TestNG-tests-2] INFO  LoginPage - Performing Logout
+2026-05-28 14:36:21 [TestNG-tests-1] INFO  LoginPage - Performing Logout
+2026-05-28 14:36:26 [TestNG-tests-3] INFO  LoginPage - Login button clicked successfully
+2026-05-28 14:36:27 [TestNG-tests-1] INFO  LoginPage - Logout successful
+2026-05-28 14:36:27 [TestNG-tests-1] INFO  LoginPage - Entering username
+2026-05-28 14:36:32 [TestNG-tests-3] INFO  LoginPage - Performing Logout
+2026-05-28 14:36:35 [TestNG-tests-1] INFO  LoginPage - Username entered successfully
+2026-05-28 14:36:35 [TestNG-tests-1] INFO  LoginPage - Entering password
+2026-05-28 14:36:35 [TestNG-tests-1] INFO  LoginPage - Password entered successfully
+2026-05-28 14:36:35 [TestNG-tests-1] INFO  LoginPage - Clicking Login button
+2026-05-28 14:36:35 [TestNG-tests-1] INFO  LoginPage - Login button clicked successfully
+2026-05-28 14:36:36 [TestNG-tests-1] INFO  Login_TC - ===== Closing Browser =====
+2026-05-28 14:36:40 [TestNG-tests-3] INFO  LoginPage - Logout successful
+2026-05-28 14:36:40 [TestNG-tests-3] INFO  LoginPage - Entering username
+2026-05-28 14:36:41 [TestNG-tests-3] INFO  LoginPage - Username entered successfully
+2026-05-28 14:36:41 [TestNG-tests-3] INFO  LoginPage - Entering password
+2026-05-28 14:36:41 [TestNG-tests-3] INFO  LoginPage - Password entered successfully
+2026-05-28 14:36:41 [TestNG-tests-3] INFO  LoginPage - Clicking Login button
+2026-05-28 14:36:42 [TestNG-tests-3] INFO  LoginPage - Login button clicked successfully
+2026-05-28 14:36:42 [TestNG-tests-3] INFO  Login_TC - ===== Closing Browser =====
+2026-05-28 14:36:51 [TestNG-tests-2] INFO  LoginPage - Logout successful
+2026-05-28 14:36:51 [TestNG-tests-2] INFO  LoginPage - Entering username
+2026-05-28 14:36:51 [TestNG-tests-2] INFO  LoginPage - Username entered successfully
+2026-05-28 14:36:51 [TestNG-tests-2] INFO  LoginPage - Entering password
+2026-05-28 14:36:51 [TestNG-tests-2] INFO  LoginPage - Password entered successfully
+2026-05-28 14:36:51 [TestNG-tests-2] INFO  LoginPage - Clicking Login button
+2026-05-28 14:36:51 [TestNG-tests-2] INFO  LoginPage - Login button clicked successfully
+2026-05-28 14:36:53 [TestNG-tests-2] INFO  Login_TC - ===== Closing Browser =====

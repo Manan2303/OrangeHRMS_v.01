@@ -2,21 +2,21 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Candidate_Registration_Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="Utilities.ExtentReportManager"/>
+    <listener class-name="listeners.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Candidate_Registration_Test_edge(failed)">
+  <test thread-count="5" parallel="tests" name="Login_Test_Test_edge(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="edge"/>
     <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
     <classes>
-      <class name="TestCases.AddCandidateForm_TC">
+      <class name="TestCases.Login_TC">
         <methods>
-          <include name="addCandidate_test"/>
-          <include name="teardown"/>
+          <include name="testInvalidLogin"/>
           <include name="captureScreenshotOnFailure"/>
+          <include name="tearDown"/>
           <include name="setdata"/>
         </methods>
-      </class> <!-- TestCases.AddCandidateForm_TC -->
+      </class> <!-- TestCases.Login_TC -->
     </classes>
-  </test> <!-- Candidate_Registration_Test_edge(failed) -->
+  </test> <!-- Login_Test_Test_edge(failed) -->
 </suite> <!-- Failed suite [Candidate_Registration_Suite] -->
